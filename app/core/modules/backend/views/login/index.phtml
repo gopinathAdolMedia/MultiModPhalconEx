@@ -1,0 +1,16 @@
+<div id="pleft">
+	<h2> Please login to Access the Admin Dashboard</h2>
+	<?php $this->flashSession->output();?>
+	<?php echo $this->htmlTags->form(array("admin/login/validate", "accept-charset" => "utf-8")); ?>
+		<?php echo $this->htmlTags->hiddenField(array($this->security->getTokenKey(), "value"=> $this->security->getToken())) ?>
+		<p> 
+			<label for="u"> Username </label> <br/>
+			<?php echo $this->htmlTags->textField(array("username", "id" => "u", "size" => "30", "class" => "input-text")); ?>
+		</p>
+		<p> 
+			<label for="p"> Password </label> <br/>
+			<?php echo $this->htmlTags->passwordField(array("password", "id" => "p", "size" => "30", "class" => "input-text")); ?>
+		</p>
+		<?php echo $this->htmlTags->submitButton(array("login", "name" => "login", "class" => "form-button")); ?>
+	<?php echo $this->htmlTags->endForm() ?>
+</div>

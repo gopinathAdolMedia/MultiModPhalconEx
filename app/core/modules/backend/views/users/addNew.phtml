@@ -1,0 +1,71 @@
+<div class="content-header">
+    <div id="page-title"><h3><?php echo $pageName; ?></h3></div>
+	<div class="form-buttons">
+		
+		<button type="button" class="scalable back" onclick="window.location='<?php echo $this->url->getBaseUri() . 'admin/users';?>'">
+			<span>Back</span>
+		</button>
+		
+	</div>	
+	<div class="clear"></div>
+</div>
+
+<div class="entry-edit" style="width : 50%;" >
+
+	<div class="entry-edit-head">
+		<h4><?php echo $pageName; ?></h4>
+	</div>
+	
+	<fieldset class="np">
+		<div id="new_member_role_main_div" >
+			<div class="content">
+				<div class="hor-scroll">
+					<?php echo $this->htmlTags->form(array("admin/users/insertUser", "method"=> "POST", "id" => "new_member_user_form")) ?>
+						<?php echo $this->htmlTags->hiddenField(array($this->security->getTokenKey(), "value"=> $this->security->getToken())) ?>
+						<?php echo $this->htmlTags->hiddenField(array("site_url_users_addNew", "value"=> $this->url->getBaseUri() . 'admin/users')) ?>
+						<table>
+							<tr>
+								<td><label>User Name</label></td>
+								<td><?php echo $this->htmlTags->textField(array("user_name", "size"=> "30", "maxlength" => "60")) ?></td>
+							</tr>
+							<tr>
+								<td><label>Email</label></td>
+								<td><?php echo $this->htmlTags->textField(array("user_email", "size"=> "30", "maxlength" => "60")) ?></td>
+							</tr>
+							<tr>
+								<td><label>Password</label></td>
+								<td><?php echo $this->htmlTags->passwordField(array("user_passw1", "size"=> "30", "maxlength" => "60")) ?></td>
+							</tr>
+							<tr>
+								<td><label>Retype Password</label></td>
+								<td><?php echo $this->htmlTags->passwordField(array("user_passw2", "size"=> "30", "maxlength" => "60")) ?></td>
+							</tr>
+							<tr>
+								<td><label>Display Name</label></td>
+								<td><?php echo $this->htmlTags->textField(array("user_display_name", "size"=> "30", "maxlength" => "60")) ?></td>
+							</tr>
+							<tr>
+								<td><label>Role</label></td>
+								<td><?php echo $this->htmlTags->select(array("user_role_select", RolesModel::find(), "using" => array("role_id", "role_name"))) ?></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td style="float: left;"><?php echo $this->htmlTags->submitButton(array("Add", "class" => "form-button")) ?></td>
+							</tr>
+						</table>
+					<?php echo $this->htmlTags->endForm() ?>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+
+<?php
+
+	$assetsVariables = $this->inlineRegistry->getValue('assets');
+	$this->assets
+	->collection($assetsVariables['themeJs'])
+	->addJs($assetsVariables['themeAssetsPath'] . "js/member_users.js");
+
+ ?>

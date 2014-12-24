@@ -1,0 +1,39 @@
+
+	<ul id="navigation_links" class="nav" >
+	
+		<li class="nav-root"><?php echo $this->htmlTags->linkTo("admin", "Dashboard"); ?></li>
+		
+		<li class="nav-root">
+		
+			<?php echo $this->htmlTags->linkTo("admin/users", "Members"); ?>
+			<?php // echo "Members"; ?>
+			<ul>
+				<li><?php echo $this->htmlTags->linkTo("admin/users", "Users"); ?></li>
+				<li><?php echo $this->htmlTags->linkTo("admin/roles", "Roles"); ?></li>
+			</ul>
+			
+		</li>
+		
+	</ul>
+	
+	
+	
+	<?php // if(\AuthenticationOpns::is_loggedIn() && \AuthenticationOpns::getLoggedUserDetails()){ ?>
+	<?php if(\AuthenticationOpns::is_adminLoggedIn() && \AuthenticationOpns::getLoggedAdminDetails()){ ?>
+	
+		<?php  $userDetails = \AuthenticationOpns::getLoggedAdminDetails(); ?>
+		
+		<ul id="profile_link" class="nav nav-right" >
+		
+			<li class="nav-root">
+			
+				<span><?php echo $userDetails['display_name'] . " ( " . $userDetails['roleDetails']['role_name'] . " )"; ?></span>
+				<ul>
+					<li><?php echo $this->htmlTags->linkTo("admin/login/logout", "Logout"); ?></li>
+				</ul>
+				
+			</li>
+			
+		</ul>
+		
+	<?php }?>

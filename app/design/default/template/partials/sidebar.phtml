@@ -1,0 +1,20 @@
+<?php $controllerScope = $this->inlineRegistry->getValue('controllerScope'); ?>
+
+<?php if($controllerScope != 'backendLogin') { ?>
+	<div id="sidebar">
+
+		<?php
+		
+			$partial_sidebar_file = $this->view->getViewsDir() . $this->view->getPartialsDir() . "sidebar.phtml";
+
+			if(file_exists($partial_sidebar_file)) {
+			
+				$this->view->partial("sidebar", array());
+				
+			}
+			
+		?>
+		
+	</div>
+
+<?php } ?>

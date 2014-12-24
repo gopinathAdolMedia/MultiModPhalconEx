@@ -1,0 +1,19 @@
+
+<h1>Hai This is Sample Example for Multi-Module Project Design By Phalcon PHP Framework - This is Frontend<br /><br /></h1>
+	
+<?php
+
+	$userDetails = \AuthenticationOpns::getLoggedUserDetails();
+
+?>
+
+<pre>
+	<?php echo $this->translator->query("hi"); ?>
+	<?php echo " " . $this->translator->query("hi-name", array('name' => $userDetails['display_name'])); ?>
+	<?php echo " Current Store : " . $this->storeManager->getCurrentStore(); ?>
+</pre>
+
+<pre><?php print_r($this->inlineRegistry->getValue()) ?></pre>
+
+<pre><?php print_r($_SESSION) ?></pre>
+	

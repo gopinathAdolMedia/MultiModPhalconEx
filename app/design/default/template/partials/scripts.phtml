@@ -1,0 +1,92 @@
+<?php
+
+	$controllerScope = $this->inlineRegistry->getValue('controllerScope');
+	
+	$assetVariables  = $this->inlineRegistry->getValue('assets');
+
+	$temp_PublicJsPath  = $assetVariables['publicAssetsPath']  . "js";
+	$temp_ThemeJsPath   = $assetVariables['themeAssetsPath']   . "js";
+	$temp_ModuleJsPath  = $assetVariables['moduleAssetsPath']  . "js";
+	
+	$temp_PublicJsColl  = $assetVariables['publicJs'];
+	$temp_ThemeJsColl   = $assetVariables['themeJs'];
+	$temp_ModuleJsColl  = $assetVariables['moduleJs'];
+	
+	$jsNameExt = (($controllerScope == 'backend') || ($controllerScope == 'backendLogin')) ? "Admin" : "";
+	
+	$this->assets
+	->collection($temp_PublicJsColl)
+	->join(false)
+	->setTargetPath($temp_PublicJsPath . "/base" . $jsNameExt . "Js.js")
+	->setTargetUri($temp_PublicJsPath . "/base" . $jsNameExt . "Js.js")
+	->addFilter(new Phalcon\Assets\Filters\Jsmin());
+	
+	$this->assets
+	->collection($temp_ThemeJsColl)
+	->join(true)
+	->setTargetPath($temp_PublicJsPath . "/theme" . $jsNameExt . "Js.js")
+	->setTargetUri($temp_PublicJsPath . "/theme" . $jsNameExt . "Js.js")
+	->addFilter(new Phalcon\Assets\Filters\Jsmin());
+	
+	$this->assets
+	->collection($temp_ModuleJsColl)
+	->join(true)
+	->setTargetPath($temp_PublicJsPath . "/module" . $jsNameExt . "Js.js")
+	->setTargetUri($temp_PublicJsPath . "/module" . $jsNameExt . "Js.js")
+	->addFilter(new Phalcon\Assets\Filters\Jsmin());
+	
+	
+	
+	$this->assets
+	->collection($temp_PublicJsColl)
+	// ->addJs($temp_PublicJsPath . DS . "jquery-1.7.1.min.js")
+	->addJs($temp_PublicJsPath . "/jquery-1.11.0.min.js")
+	->addJs($temp_PublicJsPath . "/jquery.dataTables.min.js")
+	->addJs($temp_PublicJsPath . "/jquery.jeditable.1.7.3.js")
+	->addJs($temp_PublicJsPath . "/jquery.dataTables.editable.2.3.3.js")
+	->addJs($temp_PublicJsPath . "/jquery-ui-1.8.17.custom.min.js")
+	->addJs($temp_PublicJsPath . "/jquery.validate.js")
+	->addJs($temp_PublicJsPath . "/bootstrap.3.1.1.min.js");
+	
+	if($controllerScope == 'frontend') {
+	
+		/* $this->assets
+		->collection($temp_ThemeJsColl)
+		->addCss("$temp_ThemeJsPath/scriptName.js"); */
+	
+	} elseif($controllerScope == 'backend') {
+		
+		$this->assets
+		->collection($temp_ThemeJsColl)
+		->addJs($temp_ThemeJsPath . "/isbn.js")
+		->addJs($temp_ThemeJsPath . "/isbn-groups.js");
+		
+	} elseif($controllerScope == 'login') {
+	
+		/* $this->assets
+		->collection($temp_ThemeJsColl)
+		->addCss("$temp_ThemeJsPath/scriptName.js"); */
+		
+	} elseif($controllerScope == 'backendLogin') {
+	
+		/* $this->assets
+		->collection($temp_ThemeJsColl)
+		->addCss("$temp_ThemeJsPath/scriptName.js"); */
+		
+	}
+	
+	
+	$partial_script_file = $this->view->getViewsDir() . $this->view->getPartialsDir() . "scripts.phtml";
+
+	if(file_exists($partial_script_file)) {
+	
+		$this->view->partial("scripts", array('moduleCollection' => $temp_ModuleJsColl, 'modulePath' => $temp_ModuleJsPath));
+		
+	}
+	
+	
+	$this->assets->outputJs($temp_PublicJsColl);
+	
+	$this->assets->outputJs($temp_ThemeJsColl);
+	
+?>

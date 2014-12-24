@@ -1,0 +1,15 @@
+<nav id="globalnav" class="nav-menu-container" >
+
+	<?php
+	
+		$partial_nav_panel_file = $this->view->getViewsDir() . $this->view->getPartialsDir() . "nav_panel.phtml";
+
+		if(file_exists($partial_nav_panel_file)) {
+		
+			$this->view->partial("nav_panel", array());
+			
+		}
+		
+	?>
+	
+</nav>

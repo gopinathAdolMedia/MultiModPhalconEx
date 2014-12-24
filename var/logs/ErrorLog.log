@@ -1,0 +1,124 @@
+[Tue, 13 May 14 13:34:45 +0000][ERROR] - <T4jDQ0E> [E_NOTICE] Undefined property: AuthenticationOpns::$siteLog (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [430])
+
+[Tue, 13 May 14 13:35:30 +0000][ERROR] - <Cr8UhXZ> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [323])
+
+[Tue, 13 May 14 13:37:01 +0000][ERROR] - <9tTk2aK> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [323])
+
+[Tue, 13 May 14 13:38:26 +0000][ERROR] - <ftPBq3z> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [323])
+
+[Tue, 13 May 14 13:43:06 +0000][ERROR] - <mT5LgP9> [E_NOTICE] Undefined property: AuthenticationOpns::$siteLog (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [438])
+
+[Tue, 13 May 14 13:45:59 +0000][ERROR] - <gjFqE8n> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [323])
+
+[Tue, 13 May 14 13:46:16 +0000][ERROR] - <wkRm18Y> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [438])
+
+[Tue, 13 May 14 13:46:35 +0000][ERROR] - <N07MjTF> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [438])
+
+[Wed, 14 May 14 08:58:17 +0000][ERROR] - <jMDfZSv> [E_NOTICE] Undefined variable: roleDetails (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [384])
+
+[Wed, 14 May 14 08:58:17 +0000][ERROR] - <KHaePIU> [E_NOTICE] Trying to get property of non-object (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [384])
+
+[Wed, 14 May 14 09:05:25 +0000][ERROR] - <Uh9SZdB> [E_NOTICE] Undefined variable: roleDetails (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [384])
+
+[Wed, 14 May 14 09:05:25 +0000][ERROR] - <5jqeEkV> [E_NOTICE] Trying to get property of non-object (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [384])
+
+[Wed, 14 May 14 09:05:26 +0000][ERROR] - <dHnaXl9> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [457])
+
+[Wed, 14 May 14 09:10:38 +0000][ERROR] - <JSOFghC> [E_NOTICE] Undefined variable: roleDetails (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [384])
+
+[Wed, 14 May 14 09:10:38 +0000][ERROR] - <kF2KV43> [E_NOTICE] Trying to get property of non-object (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [384])
+
+[Wed, 14 May 14 09:10:38 +0000][ERROR] - <q5UhQnf> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [457])
+
+[Wed, 14 May 14 09:11:30 +0000][ERROR] - <cjtG0gZ> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [457])
+
+[Wed, 14 May 14 09:26:43 +0000][ERROR] - <RTDEYh3> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [464])
+
+[Wed, 14 May 14 09:30:58 +0000][ERROR] - <Z13G4nk> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [464])
+
+[Wed, 14 May 14 09:31:51 +0000][ERROR] - <FT9SzKr> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [464])
+
+[Wed, 14 May 14 09:32:12 +0000][ERROR] - <IMbXa3d> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [464])
+
+[Wed, 14 May 14 09:32:35 +0000][ERROR] - <1ACmUZS> [E_NOTICE] Undefined variable: authorizationResult (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [336])
+
+[Wed, 14 May 14 09:32:51 +0000][ERROR] - <G2SlTRK> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [464])
+
+[Wed, 14 May 14 09:35:16 +0000][ERROR] - <4WaEO9Y> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [327])
+
+[Wed, 14 May 14 09:43:30 +0000][ERROR] - <TySD3v5> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [474])
+
+[Wed, 14 May 14 09:43:39 +0000][ERROR] - <kVZh4E0> [E_NOTICE] Undefined variable: authorizationResult (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [346])
+
+[Wed, 14 May 14 09:43:47 +0000][ERROR] - <sbzgKnS> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [474])
+
+[Wed, 14 May 14 09:44:11 +0000][ERROR] - <1xWRaHm> [E_NOTICE] Undefined variable: authorizationResult (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [346])
+
+[Wed, 14 May 14 09:44:41 +0000][ERROR] - <r6ROkt2> [E_NOTICE] Undefined variable: authorizationResult (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [345])
+
+[Wed, 14 May 14 09:45:36 +0000][ERROR] - <SA0rYJu> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [473])
+
+[Wed, 14 May 14 09:45:51 +0000][ERROR] - <nrJsv01> [E_NOTICE] Undefined variable: authorizationResult (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [345])
+
+[Wed, 14 May 14 09:45:57 +0000][ERROR] - <eb4QRfa> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [473])
+
+[Wed, 14 May 14 09:46:52 +0000][ERROR] - <aenwc1t> [E_NOTICE] Undefined variable: authorizationResult (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [345])
+
+[Wed, 14 May 14 09:57:16 +0000][ERROR] - <P8TJImK> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [475])
+
+[Wed, 14 May 14 09:57:34 +0000][ERROR] - <MgixcRV> [E_NOTICE] Undefined variable: authorizationResult (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [346])
+
+[Wed, 14 May 14 09:57:47 +0000][ERROR] - <VRshZdL> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [475])
+
+[Wed, 14 May 14 09:57:54 +0000][ERROR] - <uqKf8sw> [E_NOTICE] Undefined variable: authorizationResult (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [346])
+
+[Wed, 14 May 14 11:31:11 +0000][ERROR] - <ySrWiKf> [E_NOTICE] Undefined variable: authid (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [305])
+
+[Wed, 14 May 14 11:31:11 +0000][ERROR] - <IwhQmV0> [E_NOTICE] Undefined variable: remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [599])
+
+[Wed, 14 May 14 11:31:11 +0000][ERROR] - <bsTG4oO> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [616])
+
+[Wed, 14 May 14 11:32:15 +0000][ERROR] - <n7FBuJ9> [E_NOTICE] Undefined variable: remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [600])
+
+[Wed, 14 May 14 11:32:15 +0000][ERROR] - <Z60su3k> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [617])
+
+[Wed, 14 May 14 11:36:52 +0000][ERROR] - <GeOy1ZS> [E_NOTICE] Undefined variable: remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [601])
+
+[Wed, 14 May 14 11:36:52 +0000][ERROR] - <7m2Yu5V> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [618])
+
+[Wed, 14 May 14 11:38:02 +0000][ERROR] - <OcB1aNY> [E_NOTICE] Undefined variable: remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [602])
+
+[Wed, 14 May 14 11:38:02 +0000][ERROR] - <RgYkV1U> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [618])
+
+[Wed, 14 May 14 11:38:43 +0000][ERROR] - <OCHedIZ> [E_NOTICE] Undefined variable: remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [602])
+
+[Wed, 14 May 14 11:38:43 +0000][ERROR] - <SBrhEmq> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [618])
+
+[Wed, 14 May 14 11:41:20 +0000][ERROR] - <BgupLyJ> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [618])
+
+[Wed, 14 May 14 11:41:29 +0000][ERROR] - <LENQeai> [E_NOTICE] Undefined variable: authid (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [306])
+
+[Wed, 14 May 14 11:41:29 +0000][ERROR] - <IP91Aeg> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [618])
+
+[Wed, 14 May 14 11:41:41 +0000][ERROR] - <D4fE6dc> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [618])
+
+[Wed, 14 May 14 11:43:33 +0000][ERROR] - <aLMVunQ> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [618])
+
+[Wed, 14 May 14 11:43:42 +0000][ERROR] - <EycN5Is> [E_NOTICE] Undefined variable: authid (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [306])
+
+[Wed, 14 May 14 11:43:42 +0000][ERROR] - <8Zsvnk4> [E_NOTICE] Undefined variable: temp_remoteIP (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [618])
+
+[Wed, 14 May 14 11:45:40 +0000][ERROR] - <wYNZEWS> [E_NOTICE] Undefined variable: authid (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [306])
+
+[Wed, 14 May 14 11:51:20 +0000][ERROR] - <xfmiHOR> [E_NOTICE] Undefined variable: authid (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [306])
+
+[Wed, 14 May 14 11:57:55 +0000][ERROR] - <x7A94T0> [E_NOTICE] Undefined variable: authid (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [306])
+
+[Wed, 14 May 14 11:58:56 +0000][ERROR] - <7TRsDnE> [E_NOTICE] Undefined variable: authid (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [306])
+
+[Wed, 14 May 14 12:01:29 +0000][ERROR] - <4lomNU0> [E_NOTICE] Undefined variable: authid (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [306])
+
+[Wed, 14 May 14 12:12:58 +0000][ERROR] - <mvhfkAa> [E_NOTICE] Undefined variable: authid (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\AuthenticationOpns.php Line: [306])
+
+[Mon, 19 May 14 09:37:14 +0000][ERROR] - <KkNmEOh> [E_NOTICE] Undefined variable: dirCheckResult (File: E:\xampp\htdocs\MultiModPhalconEx\app\core\engine\Classes\ModuleInitiator.php Line: [149])
+

@@ -1,0 +1,44 @@
+<?php
+
+	$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : 0;
+	$pageTitle = isset($pageName) ? $this->config->application->siteName . ' - ' . $pageName : $this->config->application->siteName;
+	$temp_PartialDir = $this->view->getPartialsDir();
+	
+?>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		
+		<title><?php echo $pageTitle; ?></title>
+		
+		<?php require __DIR__ . "/partials/styles.phtml"; ?>
+		
+		<?php require __DIR__ . "/partials/scripts.phtml"; ?>
+
+		
+	</head>
+	
+	<body>
+	
+		<div id="wrap">
+		
+			<?php require __DIR__ . "/partials/header.phtml"; ?>
+			
+			<?php require __DIR__ . "/partials/nav_panel.phtml"; ?>
+			
+			<?php require __DIR__ . "/partials/main_content.phtml"; ?>
+			
+			<?php require __DIR__ . "/partials/sidebar.phtml"; ?>
+			
+			<?php require __DIR__ . "/partials/footer.phtml"; ?>
+			
+		</div>
+		
+	</body>
+	
+</html>

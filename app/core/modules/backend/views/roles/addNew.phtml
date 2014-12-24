@@ -1,0 +1,68 @@
+<?php
+	for($i = 1; $i <= 10; $i++)
+		$clearance_level_array[$i] = $i;
+?>
+<div class="content-header">
+    <div id="page-title"><h3><?php echo $pageName; ?></h3></div>
+	<div class="form-buttons">
+		
+		<button type="button" class="scalable back" onclick="window.location='<?php echo $this->url->getBaseUri() . 'admin/roles';?>'">
+			<span>Back</span>
+		</button>
+		
+	</div>	
+	<div class="clear"></div>
+</div>
+
+
+<div class="entry-edit" style="width : 40%;" >
+
+	<div class="entry-edit-head">
+		<h4><?php echo $pageName; ?></h4>
+	</div>
+	
+	<fieldset class="np">
+		<div id="new_member_role_main_div">
+			<div class="content">
+				<div class="hor-scroll">
+					<?php echo $this->htmlTags->form(array("admin/roles/insertRole", "method"=> "POST", "id" => "new_member_role_form")) ?>
+						<?php echo $this->htmlTags->hiddenField(array($this->security->getTokenKey(), "value"=> $this->security->getToken())) ?>
+						<?php echo $this->htmlTags->hiddenField(array("site_url_roles_addNew", "value"=> $this->url->getBaseUri() . 'admin/roles')) ?>
+						<table>
+							<tr>
+								<td><label>Name</label></td>
+								<td><?php echo $this->htmlTags->textField(array("role_name", "size"=> "30", "maxlength" => "60")) ?></td>
+							</tr>
+							<tr>
+								<td><label>Description</label></td>
+								<td><?php echo $this->htmlTags->textArea(array("role_description", "cols"=> "40", "rows" => "3", "class" => "textArea")) ?></td>
+							</tr>
+							<tr>
+								<td><label>Clearance Level</label></td>
+								<td><?php echo $this->htmlTags->selectStatic(array("role_clearance_level", $clearance_level_array)) ?></td>
+							</tr>
+							<tr>
+								<td><label>Can Delete</label></td>
+								<td><?php echo $this->htmlTags->selectStatic(array("role_can_delete", array("1" => "Yes", "0" => "No"))) ?></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td style="float: left;"><?php echo $this->htmlTags->submitButton(array("Add", "class" => "form-button")) ?></td>
+							</tr>
+						</table>
+					<?php echo $this->htmlTags->endForm() ?>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+
+<?php
+
+	$assetsVariables = $this->inlineRegistry->getValue('assets');
+	$this->assets
+	->collection($assetsVariables['themeJs'])
+	->addJs($assetsVariables['themeAssetsPath'] . "js/member_roles.js");
+
+ ?>

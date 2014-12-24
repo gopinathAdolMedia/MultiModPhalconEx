@@ -1,0 +1,74 @@
+<script>
+
+	$(document).ready(function() {
+		oTable = $('#users_list_table').dataTable({
+			"iDisplayLength": 100,
+			"aLengthMenu": [100, 200, 300, 500],
+		});
+	});
+
+</script>
+
+
+<div class="content-header">
+    <div id="page-title"><h3><?php echo $pageName; ?></h3></div>
+	<div class="form-buttons">
+	
+		<button type="button" class="scalable back" onclick="window.location='<?php echo $this->url->getBaseUri() . 'admin/users/addNew';?>'" >
+			<span>Add New User</span>
+		</button>
+		
+		<button type="button" class="scalable back" onclick="window.location='<?php echo $this->url->getBaseUri() . 'admin';?>'">
+			<span>Back</span>
+		</button>
+		
+	</div>	
+	<div class="clear"></div>
+</div>
+
+
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="users_list_table" >
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>User Name</th>
+			<th>Display Name</th>
+			<th>Email ID</th>
+			<th>Role</th>
+			<th>Clearance Level</th>
+			<th>Active</th>
+			<th>Banned</th>
+			<th>Deleted</th>
+			<th>Logged In</th>
+			<th>Last Login</th>
+			<th>Last IP</th>
+			<th>Created At</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php 
+			$i = 0;
+			foreach ($userList as $users){ 
+				$roleDetails = $users->getRolesModel();
+		?>
+		<tr id="<?php echo $users->id ?>" style="text-align : center;" >
+			<td><?php echo $users->id ?></td>
+			<td><?php echo $users->username ?></td>
+			<td><?php echo $users->display_name ?></td>
+			<td><?php echo $users->email ?></td>
+			<td><?php echo $roleDetails->role_name ?></td>
+			<td><?php echo $roleDetails->clearance_level ?></td>
+			<td><?php echo ($users->active) ? "Yes" : "No" ?></td>
+			<td><?php echo ($users->banned) ? "Yes" : "No" ?></td>
+			<td><?php echo ($users->deleted) ? "Yes" : "No" ?></td>
+			<td><?php echo ($users->logged_in) ? "Yes" : "No" ?></td>
+			<td><?php echo $users->last_login ?></td>
+			<td><?php echo $users->last_ip ?></td>
+			<td><?php echo $users->created_at ?></td>
+			<td><?php echo $this->htmlTags->linkTo(array("admin/users/edit", "Edit", "class" => "form-button")); ?></td>
+		</tr>
+		<?php } ?>
+	</tbody>
+</table>
+<input type="hidden" name="users_list_count" id="users_list_count" value="<?php echo count($userList);?>" />

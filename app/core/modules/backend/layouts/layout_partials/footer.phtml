@@ -1,0 +1,20 @@
+
+	<?php
+	
+		echo (isset($foot) && is_array($foot)) ? implode("\n",$foot) : '';
+		
+		// $renderTimeData = new \CommonFns();
+		$totalRenderTime = \CommonFns::getTotalPageRenderTime();
+		
+		$memoryUsage = \CommonFns::convertMemorySizeTo(memory_get_usage());
+		
+	?>
+	
+	<p style="float: left; margin-right: 80px;">
+		<?php echo "Powered by <b><i>Phalcon PHP Framework v" . PHALCON_VERSION_CURRENT . "</i></b>" ?>.
+	</p>
+	
+	<p style="float: right; margin-right: 80px;">
+		<?php echo "Page rendered in <b><i>$totalRenderTime second(s)</i></b>, using <b><i>$memoryUsage</i></b>"; ?>.
+	</p>
+	

@@ -1,0 +1,24 @@
+<footer id="footer">
+
+	<?php
+	
+		$assetVariables = $this->inlineRegistry->getValue('assets');
+		
+		$temp_ModuleCssColl  = $assetVariables['moduleCss'];
+		$temp_ModuleJsColl   = $assetVariables['moduleJs'];
+	
+		$partial_footer_file = $this->view->getViewsDir() . $this->view->getPartialsDir() . "footer.phtml";
+
+		if(file_exists($partial_footer_file)) {
+		
+			$this->view->partial("footer", array());
+			
+		}
+	
+		$this->assets->outputCss($temp_ModuleCssColl);
+		
+		$this->assets->outputJs($temp_ModuleJsColl);
+		
+	?>
+	
+</footer>

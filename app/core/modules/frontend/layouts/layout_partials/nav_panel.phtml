@@ -1,0 +1,44 @@
+<?php 
+
+	// if(\AuthenticationOpns::is_adminLoggedIn() && \AuthenticationOpns::getLoggedAdminDetails()){
+	if(\AuthenticationOpns::is_loggedIn() && \AuthenticationOpns::getLoggedUserDetails()){ 
+		$userDetails = \AuthenticationOpns::getLoggedUserDetails();
+		$userLogCheck = true;
+		$userDisplayName = $userDetails['display_name'];
+	} else {
+		$userLogCheck = false;
+		$userDisplayName = "Guest";
+	}
+	
+?>
+
+
+	<ul id="profile_link" class="nav-left">
+	
+		<li>
+	
+			<span><?php echo "Hi, " .$userDisplayName ; ?></span>
+			
+		</li>
+		
+	</ul>
+	
+	<ul id="navigation_link" class="nav-right">
+
+		<li class="highlight" ><?php echo $this->htmlTags->linkTo("", "Main"); ?></li>
+		<li class="highlight" ><?php echo $this->htmlTags->linkTo("posts", "Posts"); ?></li>
+		<li class="highlight" ><?php echo $this->htmlTags->linkTo("csvquery", "CSV Query"); ?></li>
+		
+		<?php if($userLogCheck){ ?>
+		
+			<li class="highlight" ><?php echo $this->htmlTags->linkTo("login/logout", "Logout"); ?></li>
+			
+		<?php } else { ?>
+		
+			<li class="highlight" ><?php echo $this->htmlTags->linkTo("login", "Login"); ?></li>
+			
+		<?php } ?>
+
+	</ul>
+	
+	

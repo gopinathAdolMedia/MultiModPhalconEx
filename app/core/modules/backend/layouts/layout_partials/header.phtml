@@ -1,0 +1,8 @@
+<?php $assetVariables  = $this->inlineRegistry->getValue('assets'); ?>
+
+	<div class="header-top">
+		<?php $logoImgTag  =  $this->htmlTags->imageInput(array("src" => $this->url->getBaseUri() . $assetVariables['publicAssetsPath'] . "images/logo.png", "border" => "0")); ?>
+		<?php $logoImgTag .=  $this->htmlTags->imageInput(array("src" => $this->url->getBaseUri() . $assetVariables['publicAssetsPath'] . "images/logo_text.png", "border" => "0", "style" => "text-align : center;")); ?>
+		<?php echo $this->htmlTags->linkTo("admin", $logoImgTag); ?>
+	</div>
+	

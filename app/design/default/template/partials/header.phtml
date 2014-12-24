@@ -1,0 +1,15 @@
+<header id="header">
+
+	<?php
+	
+		$partial_header_file = $this->view->getViewsDir() . $this->view->getPartialsDir() . "header.phtml";
+
+		if(file_exists($partial_header_file)) {
+		
+			$this->view->partial("header", array());
+			
+		}
+		
+	?>
+	
+</header>

@@ -1,0 +1,60 @@
+<?php // echo $this->htmlTags->javascriptInclude("js/app/admin/iphone.js"); ?>
+<script>
+
+	$(document).ready(function() {
+		oTable = $('#roles_list_table').dataTable({
+			"iDisplayLength": 100,
+			"aLengthMenu": [100, 200, 300, 500],
+		});
+	});
+
+</script>
+
+
+<div class="content-header">
+    <div id="page-title"><h3><?php echo $pageName; ?></h3></div>
+	<div class="form-buttons">
+	
+		<button type="button" class="scalable back" onclick="window.location='<?php echo $this->url->getBaseUri() . 'admin/roles/addNew';?>'" >
+			<span>Add New Role</span>
+		</button>
+		
+		<button type="button" class="scalable back" onclick="window.location='<?php echo $this->url->getBaseUri() . 'admin';?>'">
+			<span>Back</span>
+		</button>
+		
+	</div>	
+	<div class="clear"></div>
+</div>
+
+
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="roles_list_table" >
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>Role Name</th>
+			<th>Role Description</th>
+			<th>Clearance Level</th>
+			<th>Default</th>
+			<th>Can Delete</th>
+			<th>Deleted</th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php 
+			$i = 0;
+			foreach ($roleList as $roles){ 
+		?>
+		<tr id="<?php echo $roles->role_id ?>" style="text-align : center;" >
+			<td><?php echo $roles->role_id ?></td>
+			<td><?php echo $roles->role_name ?></td>
+			<td><?php echo $roles->description ?></td>
+			<td><?php echo $roles->clearance_level ?></td>
+			<td><?php echo ($roles->default_role) ? "Yes" : "No" ?></td>
+			<td><?php echo ($roles->can_delete) ? "Yes" : "No" ?></td>
+			<td><?php echo ($roles->deleted) ? "Yes" : "No" ?></td>
+		</tr>
+		<?php } ?>
+	</tbody>
+</table>
+<input type="hidden" name="roles_list_count" id="roles_list_count" value="<?php echo count($roleList);?>" />

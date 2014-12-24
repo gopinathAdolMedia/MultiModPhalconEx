@@ -1,0 +1,89 @@
+<?php
+
+	$controllerScope = $this->inlineRegistry->getValue('controllerScope');
+	
+	$assetVariables  = $this->inlineRegistry->getValue('assets');
+
+	$temp_PublicCssPath  = $assetVariables['publicAssetsPath']  . "css";
+	$temp_ThemeCssPath   = $assetVariables['themeAssetsPath']   . "css";
+	$temp_ModuleCssPath  = $assetVariables['moduleAssetsPath']  . "css";
+	
+	$temp_PublicCssColl  = $assetVariables['publicCss'];
+	$temp_ThemeCssColl   = $assetVariables['themeCss'];
+	$temp_ModuleCssColl  = $assetVariables['moduleCss'];
+	
+	
+	$cssNameExt = (($controllerScope == 'backend') || ($controllerScope == 'backendLogin')) ? "Admin" : "";
+	
+	$this->assets
+	->collection($temp_PublicCssColl)
+	->join(false)
+	->setTargetPath($temp_PublicCssPath . "/base" . $cssNameExt . "Css.css")
+	->setTargetUri($temp_PublicCssPath . "/base" . $cssNameExt . "Css.css")
+	->addFilter(new Phalcon\Assets\Filters\Cssmin());
+	
+	$this->assets
+	->collection($temp_ThemeCssColl)
+	->join(false)
+	->setTargetPath($temp_PublicCssPath . "/theme" . $cssNameExt . "Css.css")
+	->setTargetUri($temp_PublicCssPath . "/theme" . $cssNameExt . "Css.css")
+	->addFilter(new Phalcon\Assets\Filters\Cssmin());
+	
+	$this->assets
+	->collection($temp_ModuleCssColl)
+	->join(true)
+	->setTargetPath($temp_PublicCssPath . "/module" . $cssNameExt . "Css.css")
+	->setTargetUri($temp_PublicCssPath . "/module" . $cssNameExt . "Css.css")
+	->addFilter(new Phalcon\Assets\Filters\Cssmin());
+	
+	
+	$this->assets
+	->collection($temp_PublicCssColl)
+	->addCss($temp_PublicCssPath . "/bootstrap.3.1.1.min.css")
+	->addCss($temp_PublicCssPath . "/bootstrap-theme.3.1.1.css")
+	->addCss($temp_PublicCssPath . "/demo_table.css")
+	->addCss($temp_PublicCssPath . "/demo_page.css")
+	->addCss($temp_PublicCssPath . "/demo_table_jui.css")
+	->addCss($temp_PublicCssPath . "/smoothness/jquery-ui-1.8.4.custom.css");
+	
+	if($controllerScope == 'frontend') {
+	
+		$this->assets
+		->collection($temp_ThemeCssColl)
+		->addCss($temp_ThemeCssPath . "/frontend.css");
+	
+	} elseif($controllerScope == 'backend') {
+		
+		$this->assets
+		->collection($temp_ThemeCssColl)
+		->addCss($temp_ThemeCssPath . "/admin.css");
+		
+	} elseif($controllerScope == 'login') {
+	
+		$this->assets
+		->collection($temp_ThemeCssColl)
+		->addCss($temp_ThemeCssPath . "/frontendLogin.css");
+		
+	} elseif($controllerScope == 'backendLogin') {
+
+		$this->assets
+		->collection($temp_ThemeCssColl)
+		->addCss($temp_ThemeCssPath . "/adminLogin.css");
+		
+	}
+	
+	$partial_style_file = $this->view->getViewsDir() . $this->view->getPartialsDir() . "styles.phtml";
+	
+
+	if(file_exists($partial_style_file)) {
+	
+		$this->view->partial("styles", array('moduleCollection' => $temp_ModuleCssColl, 'modulePath' => $temp_ModuleCssPath));
+		
+	}
+	
+	
+	$this->assets->outputCss($temp_PublicCssColl);
+	
+	$this->assets->outputCss($temp_ThemeCssColl);
+	
+?>
